@@ -53,7 +53,7 @@ Following security best practices, configure the firewall's inbound and outbound
 
    <img src=""/>
 
-2. Click on **Create Firewall**
+2. Click on **Create Firewall**.
   
 3. Set the firewall rules for incoming traffic.<br>
    Allow SSH access from your machine by adding an inbound rule that allows traffic from the public IP address of your machine on port 22. Keep in mind that this IP may change.
@@ -89,7 +89,7 @@ Following security best practices, configure the firewall's inbound and outbound
        cd /opt
    ```
         
-7. Navigate to the Nexus Downloads section and copy the link of the URL to download the .tar.gz file [Nexus Download](https://help.sonatype.com/en/download.html)
+7. Navigate to the Nexus Downloads section and copy the link of the URL to download the .tar.gz file [Nexus Download](https://help.sonatype.com/en/download.html).
     
 8. Download the .tar.gz file under the /opt directory.
 
@@ -107,7 +107,7 @@ Following security best practices, configure the firewall's inbound and outbound
     
     <img src=""/>
     
-10. Display the files under the opt folder and we have two new directories the nexus-3.76.1-01 and sonatype-work.
+10. Display the files under the /opt directory. You should see two new directories: **nexus-3.76.1-01** and **sonatype-work**.
     * **nexus-3.76.1-01**: Contains the nexus runtime and application.
     * **sonatype-work**: Contains your Nexus configuration and data.
     
@@ -119,7 +119,7 @@ Following security best practices, configure the firewall's inbound and outbound
        adduser nexus
     ```
     
-12. Grant only the required permission to run Nexus. Assign Nexus as the owner and group of the nexus-3.76.1-01 and sonatype-work directories.
+12. Grant only the required permission to run Nexus. Assign Nexus as the owner and group of the **nexus-3.76.1-01** and **sonatype-work** directories.
     
     ```bash
        chown -R nexus:nexus nexus-3.76.1-01
@@ -252,7 +252,7 @@ Clone the Java-Gradle application from Nana DevOps Bootcamp, follow these steps:
 
 Clone the Java-Gradle application from Nana DevOps Bootcamp, follow these steps:
 
-1. Open the maven-app in IntelliJ and add the plugins to push from Maven to Nexus in the **pom.xml** file
+1. Open the maven-app in IntelliJ and add the plugins to push from Maven to Nexus in the **pom.xml** file.
 
    ```bash
     <groupId>com.example</groupId>
@@ -312,7 +312,7 @@ Clone the Java-Gradle application from Nana DevOps Bootcamp, follow these steps:
    
    <img src=""/>
 
-6. Verify that the .jar file is available
+6. Verify that the .jar file is available.
 
 7. Push the artifact to the Nexus repository.
 
