@@ -5,6 +5,8 @@ This demo project is part of Module 6: Artifact Repository Manager with Nexus fr
 
 <br />
 
+[Demo project with Maven app](https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Maven)
+
 ## 🚀 Technologies Used
 
 - <b>Digital Ocean: Cloud provider for hosting Nexus Repository.</b>
