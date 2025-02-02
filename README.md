@@ -130,10 +130,10 @@ Following security best practices, configure the firewall's inbound and outbound
        chown -R nexus:nexus nexus-3.76.1-01
        chown -R nexus:nexus sonatype-work
     ```
+
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/9.%20Changing%20Folders%20owernship%20from%20root%20to%20nexus.png"/>
     
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/9.%20Changing%20Folders%20owernship%20from%20root%20to%20nexus.png"/>
-    
-11. Configure Nexus to run as the Nexus user by modifying the nexus.rc file in the /opt/nexus-3.76.1-01/bin directory.
+12. Configure Nexus to run as the Nexus user by modifying the nexus.rc file in the /opt/nexus-3.76.1-01/bin directory.
 
      ```bash
        vim nexus-3.76.1-01/bin/nexus.rc
@@ -141,13 +141,13 @@ Following security best practices, configure the firewall's inbound and outbound
     
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/10%20SeetingUp%20The%20NExusRC%20file%20to%20run%20as%20NExus%20user.png"/>
     
-12. Switch from root user to Nexus user.
+13. Switch from root user to Nexus user.
 
      ```bash
        su - nexus
     ```
      
-13. Deploy Nexus application on the droplet using the Nexus user.
+14. Deploy Nexus application on the droplet using the Nexus user.
 
     ```bash
        /opt/nexus-3.76.1-01/bin/nexus start
@@ -155,7 +155,7 @@ Following security best practices, configure the firewall's inbound and outbound
 
      <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/11%20Starting%20app%20from%20nexus%20user.png"/>
     
-14. Verify the process ID (PID) and the port used by the application.
+15. Verify the process ID (PID) and the port used by the application.
 
      ```bash
        ps aux | grep nexus
@@ -164,11 +164,11 @@ Following security best practices, configure the firewall's inbound and outbound
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/12%20Checking%20Nexus%20is%20running%201.png"/>
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/12%20Checking%20Nexus%20is%20running.png"/>
       
-15. Modify the droplet firewall rules to allow inbound traffic on port 8081. 
+16. Modify the droplet firewall rules to allow inbound traffic on port 8081. 
 
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/Modifying%20inboud%20rules%20droplets%20firewall.png"/>
     
-16. Open a browser and enter the IP address of the droplet followed by the port in the following format: ip_address:port.
+17. Open a browser and enter the IP address of the droplet followed by the port in the following format: ip_address:port.
 
     The Nexus repository is running on DigitalOcean.
 
@@ -191,18 +191,18 @@ Following security best practices, configure the firewall's inbound and outbound
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/18%20Creating%20user.png"/> 
    
 3. Create a role for the user in Nexus repository.
- 
-  <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/19%20Creating%20roles.png"/> 
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/19%20Creating%20roles.png"/> 
 
 4. Setup the role by adding type, Role ID, Role Name
-  
-  <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/22%20Creating%20roles%20%203.png"/>
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/22%20Creating%20roles%20%203.png"/>
 
 5. Click on modify privileges and assign the least privileges to follow best practices.
- 
-  <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/21%20Adding%20permission%20to%20role.png"/>
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/21%20Adding%20permission%20to%20role.png"/>
   
-6. Assign the role to the user.
+7. Assign the role to the user.
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/23%20Assign%20Role%20to%20user.png"/>
 
