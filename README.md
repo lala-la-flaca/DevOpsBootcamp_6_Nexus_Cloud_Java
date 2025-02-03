@@ -20,6 +20,8 @@ This demo project is part of Module 6: Artifact Repository Manager with Nexus fr
 - <b>Setup **Nexus Repository Manager** on Digital ocean.</b>
 - <b>Setup users and roles to access Nexus.</b>
 - <b>Deploy Java artifact to Nexus using Gradle and Maven.</b>
+- <b>Create a BlobStore.</b>
+- <b>Create Cleanup policies.</b>
 
 ## 🏗 Project Architecture
 <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/NexusgradleMaven.png"/>
@@ -346,4 +348,38 @@ Clone the Java-Gradle application from Nana DevOps Bootcamp, follow these steps:
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java/blob/main/Img/BothAppsNExus.png"/>
    
     
+### Creating Blob Store
+1. Go to settings, then select Blob Store from the left  panel.
+2. Click Create Blob Store.
+3. Select File as storage type.
+4. Enter the Name of the blob store.
+5. Specify the path and save.
 
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Gradle/blob/main/Img/BlobStore.png"/>
+
+     
+7. Access the blob store from the command line.
+
+   ```bash
+   cd /opt/sonatype-work/nexus3/blobs/
+   ```
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Gradle/blob/main/Img/BlobStoreCreated.PNG"/>
+   
+   
+### Creating Cleanup Policies
+1. Go to settings, then select Cleanup Policies from the left panel.
+3. Click Create Cleanup policy.
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Gradle/blob/main/Img/Cleanup%20policies.png?raw=true"/>
+   
+5. Enter the Name.
+6. Select the format (maven2).
+7. Select the release type, This field indicates the components to which the cleanup policy applies.
+8. Set the cleanup criteria, this field defines the rules that the policy follows (delete all).
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Gradle/blob/main/Img/Cleanup%20policies02.png?raw=true"/>
+   
+10. Apply the policy to the repository.
+   
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_6_Nexus_Cloud_Java_Gradle/blob/main/Img/Cleanup%20policies04.png?raw=true"/>
